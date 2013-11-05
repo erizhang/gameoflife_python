@@ -6,6 +6,10 @@ class Game:
         self.m_city = city
 
     def __isAlive(self, col, row):
+        if col < 0 or col >= self.m_size \
+        or row < 0 or row >= self.m_size:
+            return False
+
         pos = row * self.m_size + col
         if self.m_city[pos] == '1':
             return True
