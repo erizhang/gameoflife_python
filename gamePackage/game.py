@@ -25,4 +25,12 @@ class Game:
         return count
         
     def nextGeneration(self):
-        return "000000000"
+        next_gen = list(self.m_city)
+        
+        for col in range(self.m_size):
+            for row in range(self.m_size):
+                count = self.aliveNeighbourCount(col, row)
+                pos = row * self.m_size + col
+                if count < 2 or count > 3:
+                    next_gen[pos] = "0"
+        return "".join(next_gen)
