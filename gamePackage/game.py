@@ -24,4 +24,5 @@ class Game:
                 count += 1
         return count
         
-    
+    def nextGeneration(self):
+        return ""
