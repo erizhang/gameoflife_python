@@ -32,6 +32,11 @@ class TestNextGeneration(unittest.TestCase):
         next_gen = g.nextGeneration()
         self.assertEqual("000000000", next_gen, "Simple Generation is failure")
 
+    def testNextGenerationAlongToDie(self):
+        g = Game(3, "000010000")
+        next_gen = g.nextGeneration()
+        self.assertEqual("000000000", next_gen, "Along to die is failure")
+
 
 if __name__ == "__main__":
     unittest.main()

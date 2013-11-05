@@ -25,4 +25,4 @@ class Game:
         return count
         
     def nextGeneration(self):
-        return ""
+        return "000000000"
