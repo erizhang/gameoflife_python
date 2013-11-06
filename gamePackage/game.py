@@ -19,8 +19,8 @@ class Game:
         offset = [[-1, -1], [-1, 0], [-1, 1], [0, -1], \
                   [0, 1], [1, -1], [1, 0], [1, 1]]
         count = 0
-        for i in range(8):
-            if self.__isAlive(col + offset[i][1], row + offset[i][0]) is True:
+        for i, elem in enumerate(offset):
+            if self.__isAlive(col + elem[1], row + elem[0]) is True:
                 count += 1
         return count
         
