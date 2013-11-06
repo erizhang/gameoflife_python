@@ -48,9 +48,9 @@ class TestNextGeneration(unittest.TestCase):
         self.assertEqual("110110000", next_gen, "Stable alive is failure")
 
     def testNextGenerationRecover(self):
-        g = Game(3, "111110000")
+        g = Game(3, "010101000")
         next_gen = g.nextGeneration()
-        self.assertEqual("111111000", next_gen, "Recover is failure")
+        self.assertEqual("010010000", next_gen, "Recover is failure")
 
 
 if __name__ == "__main__":

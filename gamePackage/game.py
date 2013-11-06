@@ -33,4 +33,6 @@ class Game:
                 pos = row * self.m_size + col
                 if count < 2 or count > 3:
                     next_gen[pos] = "0"
+                if count == 3:
+                    next_gen[pos] = "1"
         return "".join(next_gen)
